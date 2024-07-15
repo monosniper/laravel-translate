@@ -24,7 +24,7 @@
         <div class="header__item header__block_rounded header__buttons">
             <label for="search" class="header__block_rounded header__block search">
                 <input wire:model.live="search" placeholder="Поиск..." id="search" type="search">
-                @include('inc.icon', ['name' => 'search'])
+                @include('vendor.laravel-translate.inc.icon', ['name' => 'search'])
             </label>
             <div
                 style="display: {{ (!in_array($language, $this->getConfig('auto_translate.exclude_languages'))
@@ -33,15 +33,15 @@
                 class="header__block header__block_rounded header__button"
             >
                 <span class="loader"></span>
-                @include('inc.icon', ['name' => 'translate'])
+                @include('vendor.laravel-translate.inc.icon', ['name' => 'translate'])
             </div>
             @if($this->getConfig('can_revert'))
                 <div wire:click="revert" class="header__block header__block_rounded header__button">
-                    @include('inc.icon', ['name' => 'revert'])
+                    @include('vendor.laravel-translate.inc.icon', ['name' => 'revert'])
                 </div>
             @endif
             <div wire:click="save" class="header__block header__block_rounded header__button">
-                @include('inc.icon', ['name' => 'check'])
+                @include('vendor.laravel-translate.inc.icon', ['name' => 'check'])
             </div>
         </div>
 
