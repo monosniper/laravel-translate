@@ -68,7 +68,9 @@
                                 @foreach($group as $key => $value)
                                     @isset($filteredItems[$col][$name][$key])
                                         <div class="item" >
-                                            <label for="{{ $name . '.' . $key }}" class="item__key">{{ in_array($key, $this->getConfig("keys")) ? $this->getConfig("keys.$key") : $key }}</label>
+                                            <label for="{{ $name . '.' . $key }}" class="item__key">
+                                                {{ config("$config.keys.$key") !== null ? config("$config.keys.$key") : $key }}
+                                            </label>
                                             <div class="item__value">
                                                 <textarea
                                                     @disabled($loading)
