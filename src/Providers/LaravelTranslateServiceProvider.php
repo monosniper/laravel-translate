@@ -1,6 +1,6 @@
 <?php
 
-namespace Providers;
+namespace Monosniper\LaravelTranslate\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
