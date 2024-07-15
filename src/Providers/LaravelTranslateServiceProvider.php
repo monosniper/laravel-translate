@@ -15,9 +15,7 @@ class LaravelTranslateServiceProvider extends ServiceProvider
 
             $this->publishes([
                 __DIR__.'/../../dist' => public_path('vendor/laravel-translate'),
-            ], 'public');
-
-            $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-translate');
+            ], 'laravel-assets');
 
             $this->publishes([
                 __DIR__.'/../../resources/views' => resource_path('views/vendor/laravel-translate'),
