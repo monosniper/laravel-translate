@@ -5,6 +5,7 @@ namespace Monosniper\LaravelTranslate\Livewire;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Lang;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 use LaravelLang\Translator\Services\Translate as Translator;
 
@@ -160,6 +161,7 @@ class Translate extends Component
         }
     }
 
+    #[Layout('vendor.laravel-translate.layouts.app')]
     public function render(): View
     {
         return view('vendor.laravel-translate.livewire.translate');
