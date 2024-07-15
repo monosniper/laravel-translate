@@ -46,13 +46,13 @@
         </div>
 
         <div class="header__block_rounded header__block languages">
-            @if(count($page['ru']))
+            @if(count($items[$page]['ru']))
                 <div data-lang="ru" @class(['languages__item', $language === 'ru' ? 'active' : ''])>Русский</div>
             @endif
-            @if(count($page['en']))
+            @if(count($items[$page]['en']))
                 <div data-lang="en" @class(['languages__item', $language === 'en' ? 'active' : ''])>English</div>
             @endif
-            @if(count($page['uz']))
+            @if(count($items[$page]['uz']))
                 <div data-lang="uz" @class(['languages__item', $language === 'uz' ? 'active' : ''])>Uzbek</div>
             @endif
         </div>
