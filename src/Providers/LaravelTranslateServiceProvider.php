@@ -3,6 +3,8 @@
 namespace Monosniper\LaravelTranslate\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
+use Monosniper\LaravelTranslate\Livewire\Translate;
 
 class LaravelTranslateServiceProvider extends ServiceProvider
 {
@@ -21,6 +23,8 @@ class LaravelTranslateServiceProvider extends ServiceProvider
                 __DIR__.'/../../resources/views' => resource_path('views/vendor/laravel-translate'),
             ], 'views');
         }
+
+        Livewire::component('monosniper.laravel-translate.livewire.translate', Translate::class);
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-translate');
         $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
