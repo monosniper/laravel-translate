@@ -1,0 +1,49 @@
+{
+    "name": "monosniper/laravel-translate",
+    "description": "Translation panel for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Monosniper\\LaravelTranslate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Monosniper\\LaravelTranslate\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ravilto",
+            "email": "ravilto@vk.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2",
+        "livewire/livewire": "dev-main",
+        "laravel-lang/translator": "dev-main"
+    },
+    "require-dev": {
+        "orchestra/testbench": "9.x-dev",
+        "phpunit/phpunit": "11.2.x-dev"
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Monosniper\\LaravelTranslate\\Providers\\LaravelTranslateServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
