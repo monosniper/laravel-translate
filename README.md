@@ -15,3 +15,12 @@ Publish config file (kirano_translate.php):
 ```bash
 php artisan vendor:publish --provider="Monosniper\LaravelTranslate\LaravelTranslateServiceProvider"
 ```
+
+Also you need to add /livewire/* path in csrf protection except array (bootstrap/app.php):
+
+```php
+$middleware->validateCsrfTokens(except: [
+    ...
+    'livewire/*',
+]);
+```

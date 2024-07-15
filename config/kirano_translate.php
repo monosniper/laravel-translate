@@ -12,6 +12,8 @@ return [
         'kirano_translate_main' => 'Основное',
     ],
 
+    'keys' => [],
+
     // resources/lang - if Laravel <= 9
     'lang_dir' => 'lang',
 
