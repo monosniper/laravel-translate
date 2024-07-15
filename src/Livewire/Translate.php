@@ -1,5 +1,7 @@
 <?php
 
+namespace Monosniper\LaravelTranslate\Livewire;
+
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Lang;
