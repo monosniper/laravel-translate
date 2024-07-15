@@ -13,5 +13,5 @@ composer require monosniper/laravel-translate
 Publish config file (kirano_translate.php):
 
 ```bash
-php artisan vendor:publish --provider="Monosniper\Translate\TranslateServiceProvider"
+php artisan vendor:publish --provider="Monosniper\LaravelTranslate\LaravelTranslateServiceProvider"
 ```
