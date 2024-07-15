@@ -116,7 +116,7 @@ class Translate extends Component
     }
 
     public function save(): void {
-        $content = "<?php\n\nreturn\n\n[\n";
+        $content = "<?php\n\nreturn [\n";
 
         foreach($this->items[$this->page][$this->language] as $group) {
             foreach($group as $name => $keys) {
@@ -125,13 +125,13 @@ class Translate extends Component
                         $content .= "\t'".$k."' => '".$v."',\n";
                     }
                 } else {
-                    $content .= "'$name' => [\n";
+                    $content .= "\t'$name' => [\n";
 
                     foreach($keys as $k => $v) {
-                        $content .= "\t'".$k."' => '".$v."',\n";
+                        $content .= "\t\t'".$k."' => '".$v."',\n";
                     }
 
-                    $content .= "],\n";
+                    $content .= "\t],\n";
                 }
             }
         }
