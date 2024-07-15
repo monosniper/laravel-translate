@@ -8,7 +8,7 @@
     <title>Kirano Translate | {{ config('app.name') }}</title>
     @livewireStyles
     <link rel="stylesheet" href="{{ asset('vendor/laravel-translate/css/translate.css') }}">
-    <meta name="csrf_token" value="{{ csrf_token() }}"/>
+    <meta name="csrf_token" content="{{ csrf_token() }}"/>
     @include('vendor.laravel-translate.inc.sprite')
 </head>
 <body>
