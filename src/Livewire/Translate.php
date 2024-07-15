@@ -161,7 +161,7 @@ class Translate extends Component
         }
     }
 
-    #[Layout('vendor.laravel-translate.layouts.app')]
+    #[Layout('vendor.laravel-translate.components.layouts.app')]
     public function render(): View
     {
         return view('vendor.laravel-translate.livewire.translate');
