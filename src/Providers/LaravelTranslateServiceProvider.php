@@ -22,6 +22,7 @@ class LaravelTranslateServiceProvider extends ServiceProvider
             ], 'views');
         }
 
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-translate');
         $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
     }
 }

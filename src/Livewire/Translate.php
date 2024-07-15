@@ -162,6 +162,6 @@ class Translate extends Component
 
     public function render(): View
     {
-        return view('livewire.translate');
+        return view('laravel-translate.livewire.translate');
     }
 }
