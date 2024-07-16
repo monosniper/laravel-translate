@@ -110,6 +110,7 @@ class Translate extends Component
 
     public function updatedPage(): void
     {
+        $this->language = $this->getConfig('default_lang');
         $this->pageName = $this->getConfig('pages', [])[$this->page];
         $this->currentItems = $this->items[$this->page][$this->language];
         $this->filteredItems = $this->currentItems;
