@@ -80,7 +80,7 @@
                                             <div class="item__value">
                                                 <textarea
                                                     @disabled($loading)
-                                                    @class([$language === 'en' ? '' : 'd-none'])
+                                                    @class([$language === 'ru' ? '' : 'd-none'])
                                                     rows="1"
                                                     x-init="$nextTick(() => resize())"
                                                     x-data="{
@@ -122,7 +122,7 @@
                                                 ></textarea>
                                                 <textarea
                                                     @disabled($loading)
-                                                    @class([$language === 'en' ? '' : 'd-none'])
+                                                    @class([$language === 'uz' ? '' : 'd-none'])
                                                     rows="1"
                                                     x-init="$nextTick(() => resize())"
                                                     x-data="{
