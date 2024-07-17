@@ -91,10 +91,12 @@ class Translate extends Component
     {
         foreach($this->currentItems as $col => $group) {
             foreach($group as $name => $keys) {
-                $this->items[$this->page][$this->language][$col][$name] = $this->translator->viaGoogle(
+                $this->items[$this->page][$this->language][$col][$name] = array_map(function ($translated) {
+                    return str_replace("'", "\'", $translated);
+                }, $this->translator->viaGoogle(
                     $this->items[$this->page][$this->getConfig('auto_translate.from')][$col][$name],
                     $this->language
-                );
+                ));
             }
         }
     }
