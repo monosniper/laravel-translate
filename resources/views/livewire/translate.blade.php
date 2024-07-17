@@ -118,6 +118,14 @@
             const dropdown = document.querySelector('.dropdown');
             const menu = dropdown.querySelector('.dropdown-menu')
             const translate = document.querySelector('#js-translate');
+            const textareas = document.querySelectorAll('textarea');
+
+            textareas.forEach(textarea => {
+                textarea.addEventListener('input', () => {
+                    textarea.style.height = 'auto';
+                    textarea.style.height = (textarea.scrollHeight-4) + 'px';
+                })
+            })
 
             document.querySelectorAll('.languages__item').forEach(item => {
                 item.addEventListener('click', () => {
