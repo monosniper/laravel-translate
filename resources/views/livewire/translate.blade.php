@@ -80,21 +80,63 @@
                                             <div class="item__value">
                                                 <textarea
                                                     @disabled($loading)
-                                                    style="display: {{ $language === 'ru' ? 'block' : 'none' }}"
+                                                    @class([$language === 'en' ? '' : 'd-none'])
+                                                    rows="1"
+                                                    x-init="$nextTick(() => resize())"
+                                                    x-data="{
+                                                        resize() {
+                                                            $el.style.height = 'auto';
+                                                            $el.style.height = $el.scrollHeight + 'px';
+                                                        }
+                                                    }"
+                                                    x-on:resize-textarea.window="
+                                                        setTimeout(() => {
+                                                            resize();
+                                                        }, 10);
+                                                    "
+                                                    @input="resize()"
                                                     wire:model.live="items.{{ $page }}.ru.{{ $col }}.{{ $name }}.{{ $key }}"
                                                     name="{{ $name . '.' . $key }}"
                                                     id="{{ $name . '.' . $key }}"
                                                 ></textarea>
                                                 <textarea
                                                     @disabled($loading)
-                                                    style="display: {{ $language === 'en' ? 'block' : 'none' }}"
+                                                    @class([$language === 'en' ? '' : 'd-none'])
+                                                    rows="1"
+                                                    x-init="$nextTick(() => resize())"
+                                                    x-data="{
+                                                        resize() {
+                                                            $el.style.height = 'auto';
+                                                            $el.style.height = $el.scrollHeight + 'px';
+                                                        }
+                                                    }"
+                                                    x-on:resize-textarea.window="
+                                                        setTimeout(() => {
+                                                            resize();
+                                                        }, 10);
+                                                    "
+                                                    @input="resize()"
                                                     wire:model.live="items.{{ $page }}.en.{{ $col }}.{{ $name }}.{{ $key }}"
                                                     name="{{ $name . '.' . $key }}"
                                                     id="{{ $name . '.' . $key }}"
                                                 ></textarea>
                                                 <textarea
                                                     @disabled($loading)
-                                                    style="display: {{ $language === 'uz' ? 'block' : 'none' }}"
+                                                    @class([$language === 'en' ? '' : 'd-none'])
+                                                    rows="1"
+                                                    x-init="$nextTick(() => resize())"
+                                                    x-data="{
+                                                        resize() {
+                                                            $el.style.height = 'auto';
+                                                            $el.style.height = $el.scrollHeight + 'px';
+                                                        }
+                                                    }"
+                                                    x-on:resize-textarea.window="
+                                                        setTimeout(() => {
+                                                            resize();
+                                                        }, 10);
+                                                    "
+                                                    @input="resize()"
                                                     wire:model.live="items.{{ $page }}.uz.{{ $col }}.{{ $name }}.{{ $key }}"
                                                     name="{{ $name . '.' . $key }}"
                                                     id="{{ $name . '.' . $key }}"
@@ -118,14 +160,6 @@
             const dropdown = document.querySelector('.dropdown');
             const menu = dropdown.querySelector('.dropdown-menu')
             const translate = document.querySelector('#js-translate');
-            const textareas = document.querySelectorAll('textarea');
-
-            textareas.forEach(textarea => {
-                textarea.addEventListener('input', () => {
-                    textarea.style.height = 'auto';
-                    textarea.style.height = (textarea.scrollHeight-4) + 'px';
-                })
-            })
 
             document.querySelectorAll('.languages__item').forEach(item => {
                 item.addEventListener('click', () => {
