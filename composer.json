@@ -28,7 +28,7 @@
         "spatie/laravel-package-tools": "^1.16"
     },
     "scripts": {
-
+        "test": "vendor/bin/pest"
     },
     "extra": {
         "laravel": {
