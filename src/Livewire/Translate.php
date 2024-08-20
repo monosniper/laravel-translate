@@ -166,7 +166,7 @@ class Translate extends Component
         }
     }
 
-    #[Layout('vendor.laravel-translate.components.layouts.app')]
+    #[Layout('laravel-translate.components.layouts.app')]
     public function render(): View
     {
         $this->dispatch('resize-textarea');
