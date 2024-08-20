@@ -23,7 +23,8 @@
     "require": {
         "php": "^8.2",
         "livewire/livewire": "^3.5",
-        "laravel-lang/translator": "dev-main"
+        "laravel-lang/translator": "dev-main",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "scripts": {
         "test": [
@@ -44,6 +45,7 @@
     },
     "require-dev": {
         "orchestra/testbench": "9.x-dev",
-        "phpunit/phpunit": "11.2.x-dev"
-    }
+        "phpunit/phpunit": "^11.3"
+    },
+    "prefer-stable": true
 }
