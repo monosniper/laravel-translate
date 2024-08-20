@@ -10,8 +10,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Monosniper\\LaravelTranslate\\Test\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
+            "Monosniper\\LaravelTranslate\\Test\\": "tests/"
         }
     },
     "authors": [
