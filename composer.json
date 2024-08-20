@@ -10,7 +10,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Monosniper\\LaravelTranslate\\Test\\": "tests/"
+            "Monosniper\\LaravelTranslate\\Test\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
         }
     },
     "authors": [
@@ -27,9 +28,7 @@
         "spatie/laravel-package-tools": "^1.16"
     },
     "scripts": {
-        "test": [
-            "vendor/bin/phpunit"
-        ]
+
     },
     "extra": {
         "laravel": {
@@ -39,8 +38,11 @@
         }
     },
     "config": {
+        "sort-packages": true,
         "allow-plugins": {
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
         }
     },
     "require-dev": {
