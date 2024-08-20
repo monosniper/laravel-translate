@@ -18,10 +18,6 @@ class LaravelTranslateServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../../dist' => public_path('vendor/laravel-translate'),
             ], 'laravel-assets');
-
-            $this->publishes([
-                __DIR__.'/../../resources/views' => resource_path('views/vendor/laravel-translate'),
-            ], 'views');
         }
 
         Livewire::component('monosniper.laravel-translate.livewire.translate', Translate::class);

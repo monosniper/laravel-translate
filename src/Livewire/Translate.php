@@ -171,6 +171,6 @@ class Translate extends Component
     {
         $this->dispatch('resize-textarea');
 
-        return view('vendor.laravel-translate.livewire.translate');
+        return view('laravel-translate.livewire.translate');
     }
 }
